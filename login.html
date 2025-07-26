@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind ease - Login Page</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    
+<!-- Standard favicon -->
+<link rel="icon" type="image/x-icon" href="assets/images/logo-2.png">
+
+<!-- PNG version -->
+<link rel="icon" type="image/png" href="assets/images/logo-2.png" sizes="32x32">
+
+<!-- SVG version -->
+<link rel="icon" type="image/svg+xml" href="assets/images/logo-2.png">
+
+    <!-- Custom Styles -->
+     <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Heebo', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .login-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .login-left {
+            position: relative;
+            width:100%;
+            display: flex;
+        }
+
+        .login-left img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .over-layout {
+            position: absolute;
+            left: 10%;
+            top: 5%;
+            width: 80%;
+        }
+
+        .login-right {
+   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    padding: 40px;
+    background-color: #fff;
+    width: 100%; 
+    max-width: 600px;
+    box-sizing: border-box; 
+}
+
+
+        .login-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-logo img {
+            max-width: 150px;
+        }
+
+        .input-group {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+    pointer-events: none; 
+    
+}
+
+.form-control {
+    width: 100%;
+    padding-left: 50px !important; 
+    padding-right: 10px; 
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+
+.form-control::placeholder {
+   
+    color: #aaa; 
+}       
+        .btn-login {
+            background: #2CC3BD;
+            color: #fff;
+            border-radius: 30px;
+            width: 100%;
+            font-weight: bold;
+            transition: 0.3s;
+            padding: 15px;
+            border: none;
+            margin-top: 15px;
+        }
+
+        .btn-login:hover {
+            background: #249b94;
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .terms a {
+            color: #2CC3BD;
+            text-decoration: none;
+        }
+
+        .terms a:hover {
+            text-decoration: underline;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .input-group-text {
+            border-right: none;
+            background-color: transparent;
+            color: #ddd;
+            font-size: 25px;
+            padding: 10px;
+        }
+
+        .input-group input {
+            flex: 1;
+            border-radius: 10px;
+            padding: 4px 20px;
+            border: 1px solid #ddd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .login-container {
+                grid-template-columns: 1fr;
+            }
+
+            .login-left {
+                display: none;
+            }
+
+            .login-right {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .login-right {
+                padding: 20px;
+                padding-top: 10px;
+    width: 100%; 
+    max-width: 900px;
+            }
+
+            .login-logo img {
+                max-width: 120px;
+            }
+
+            .form-control {
+                padding: 8px 15px;
+            }
+
+            .input-group-text {
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .login-right {
+                width: 50%;
+                padding: 40px;
+                width: 100%; 
+                max-width: 900px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .terms {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .terms a {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <!-- Left Side (Image & Background) -->
+    <div class="login-left">
+        <img src="assets/images/login-bg.png" alt="Login Illustration">
+        <div class="over-layout">
+            <img src="assets/images/9019190_4071500 1.png" alt="Overlay">
+        </div>
+    </div>
+
+    <!-- Right Side (Form) -->
+    <div class="login-right">
+        <div class="login-logo">
+            <img src="assets/images/Frame 1082.png" alt="Mind Ease Logo">
+        </div>
+        <form >
+            <div class="mb-3 input-group">
+                <div class="input-icon">
+                    <i class="fas fa-envelope" style="color: #ddd;"></i>
+                </div>
+                <input type="email" name="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="mb-3 input-group">
+                <div class="input-icon">
+                    <i class="fas fa-key" style="color: #ddd;"></i>
+                </div>
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
+            </div>
+            <div class="terms mb-3">
+                <div>
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">Agree to Terms & Conditions</label>
+                </div>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <a href=""></a>
+            <button type="submit" class="btn btn-login">Submit</button>
+        </form>
+        <div class="terms mt-3">
+            <p>Create a New account? <a href="./register.html">Register </a></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
